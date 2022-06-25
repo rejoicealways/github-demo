@@ -41,4 +41,5 @@ To test your ssh connection and configuration
 use
 `ssh -T git@github.com`
 
+Reference: https://gist.github.com/alejandro-martin/aabe88cf15871121e076f66b65306610
 
