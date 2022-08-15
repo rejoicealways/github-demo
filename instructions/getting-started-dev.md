@@ -11,7 +11,22 @@ Note: the / in the name of the repository does NOT create a folder or child repo
 convention.
 
 ```
-git branch 
+git branch <new branch name>
+```
+
+IMPORTANT checkout the branch you created.  If you don't, you will be making changes on master branch
+```
+git checkout <new branch name>
+```
+
+Use git to add new files created and modified files that are to be a part of the commit.
+```
+git add <untracked file>
+```
+
+
+```
+git commit -m "Message about the commit"
 ```
 
 ```
@@ -21,6 +36,6 @@ If the branch has not been created remotely yet, this will output that the follo
 pushes can be done.
 
 ```
-
+git push --set-upstream origin testbranch
 ```
 
