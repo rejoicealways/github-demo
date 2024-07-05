@@ -1,6 +1,9 @@
 # Setting up an initial repo
 
 ## Create repo in Github
+Make sure are logged into the appropriate Google account that is linked to GitHub
+for the repo you are connecting to.
+
 From the UI in Github, Go to Repositories and click on the New button 
 after entering your name in the text field.
 

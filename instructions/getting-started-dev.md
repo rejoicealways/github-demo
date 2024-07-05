@@ -1,1 +1,0 @@
-#Getting started with Development as a Collaborator to a GitHub Project

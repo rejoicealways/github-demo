@@ -13,7 +13,7 @@ Enable two-factor.  I would recommend using an authenticator app.
 
 Generate a ssh key using `ssh-keygen` on a Mac or Linux.  For Windows, you need to install a Linux shell emulator like Cmder and it will have this option
 ```
-ssh-keygen -f ~/<path_to_new_file_key> -t rsa
+ssh-keygen -f ~/<path_to_new_file_key> -t rsa-sha2-512
 or
 ssh-keygen -f ~/<path_to_new_file_key> -t ed25519
 ```

@@ -1,0 +1,147 @@
+<html>
+<head>
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content=
+                "width=device-width, initial-scale=1.0">
+    </head>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <style>
+        .center {
+            border: 5px solid;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            padding: 5px;
+        }
+
+        body {
+            text-align:center;
+        }
+
+        form {
+            display: inline-block;
+        }
+
+        .copy-link {
+            display:flex;
+            max-width:375px;
+            text-align: center;
+        }
+
+        .copy-link-input {
+            display:block;
+            margin: 0 auto;
+            flex-grow:1;
+            padding: 0 8px;
+            font-size:20px;
+            border: 1px solid #cccccc;
+            border-right: none;
+            outline: none;
+            text-align:center;
+        }
+
+        .copy-link-input:hover {
+            background:#eeeeee;
+            text-align:center;
+
+        }
+
+        .copy-link-button {
+            flex-shrink: 0;
+            width: 36px;
+            height:36px;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            background: #dddddd;
+            color: #333333;
+            outline: none;
+            border: 1px solid #cccccc;
+            padding:0;
+
+        }
+
+        .copy-link-button:hover {
+            background-color:#cccccc;
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="copy-link">
+    <input class="copy-link-input" type="text" disabled value="https://t2m.io/eyP0sEHU"/>
+    <button class="copy-link-button" type="button">
+    <span class="material-icons" style="padding: 0; line-height: 0;">
+    content_copy
+    </span>
+    </button>
+</div>
+
+</body>
+<footer>
+    <script>
+        document.querySelectorAll('.copy-link').forEach(function(copyLinkContainer) {
+            const inputField = copyLinkContainer.querySelector('.copy-link-input');
+            const copyButton = copyLinkContainer.querySelector('.copy-link-button');
+            inputField.addEventListener("focus", () => {
+                inputField.select()
+            });
+            copyButton.addEventListener("click", () => {
+                const text = inputField.value;
+                inputField.select();
+                inputField.setSelectionRange(0, 99999); // For mobile devices
+                navigator.clipboard.writeText(text);
+                inputField.value = "Copied!";
+                setTimeout(() => inputField.value = text, 2000);
+            })
+        })
+    </script>
+<script>
+    // document.querySelectorAll(".copy-link").forEach((copyLinkContainer) => {
+    //     console.log("in for each");
+    //     const inputField = copyLinkContainer.querySelector(".copy-link-input");
+    //     const copyButton = copyLinkContainer.querySelector(".copy-link-button");
+    //
+    //     // inputField.addEventListener("focus", () => {
+    //     //     inputField.select()
+    //     // });
+    //     copyButton.addEventListener("click", () => {
+    //         const text = inputField.value;
+    //         console.log("in click event");
+    //         inputField.select();
+    //         navigator.clipboard.writeText(text);
+    //         inputField.value = "Copied!";
+    //         setTimeout(() => inputField.value = text, 2000);
+    //
+    //     })
+    // })
+    // const matches = document.querySelector("#copy-link");
+    // console.log("my matchaes" + matches);
+    //
+    // // forEach method, could be shipped as part of an Object Literal/Module
+    // var forEach = function (array, callback, scope) {
+    //     for (var i = 0; i < array.length; i++) {
+    //         callback.call(scope, i, array[i]); // passes back stuff we need
+    //     }
+    // };
+    //
+    // // Usage:
+    // // optionally change the scope as final parameter too, like ECMA5
+    // var myNodeList = document.querySelectorAll('.copy-link');
+    // forEach(myNodeList, function (index, value) {
+    //     console.log("inforEach oldschool")
+    //     console.log(index, value); // passes index + value back!
+    // });
+
+    </script>
+</footer>
+</html>
